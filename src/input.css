@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    svg {
+        @apply w-full h-auto;
+    }
+
+    form {
+        @apply grid grid-cols-1 gap-4 md:grid-cols-2;
+    }
+
+    form button {
+        @apply w-fit p-2 px-6 text-white bg-green-600 rounded-md;
+    }
+
+    input, textarea {
+        @apply w-full p-2 border border-gray-300 rounded-md;
+    }
+
+    .field:has(.textarea) {
+        @apply md:col-span-2;
+    }
+
+    .h1 {
+        @apply text-3xl font-bold;
+    }
+
+    .h2 {
+        @apply text-2xl font-bold;
+    }
+
+    .h3 {
+        @apply text-xl font-bold;
+    }
+
+    .copy {
+        @apply text-lg leading-relaxed;
+    }
+
+    .copy h1 {
+        @apply h1;
+    }
+
+    .copy h2 {
+        @apply h2;
+    }
+
+    .copy h3 {
+        @apply h3;
+    }
+
+    .copy h2 + p, .copy h3 + p, .copy + .copy, .copy p + p, .copy h2 + h2, .copy h3 + h3, .copy h2 + h3, .copy h3 + h2, .copy h2 + blockquote, .copy h3 + blockquote, .copy blockquote + h2, .copy blockquote + h3, .copy blockquote + blockquote, .copy h2 + ul, .copy h3 + ul, .copy h2 + ol, .copy h3 + ol, .copy ul + h2, .copy ul + h3, .copy ol + h2, .copy ol + h3, .copy blockquote + ul, .copy blockquote + ol, .copy ul + blockquote, .copy ol + blockquote, img + p, figure + p {
+        @apply mt-4;
+    }
+
+    .copy p + h2, .copy p + h3, .copy p + blockquote, .copy blockquote + p, .copy ul + p, .copy ol + p, .copy blockquote + p, .copy p + img, .copy p + figure {
+        @apply mt-8;
+    }
+
+    .copy p + ul, .copy p + ol, .copy blockquote + blockquote, .copy ul + ul, .copy ul + ol, .copy ol + ul, .copy ol + ol, .copy ul + blockquote, .copy ol + blockquote {
+        @apply mt-4;
+    }
+
+    .copy blockquote + ul, .copy blockquote + ol {
+        @apply mt-8;
+    }
+
+    .copy li {
+        @apply ml-4 list-disc;
+    }
+
+    .copy li + li {
+        @apply mt-2;
+    }
+}

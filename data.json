@@ -1,0 +1,16 @@
+{
+    "year": 2024, 
+    "title_unlcoked": "This is the title when we are after december 1st",
+    "title_locked": "This is the title when we are before december 1st",
+    "title_active": "This is the title when we are after december 1st and before december 25th",
+    "description": "This is the description",
+    "message_locked": "This is the message when we are before december 1st",
+    "message_unlocked": "This is the message when we are after december 1st",
+    "message_active": "This is the message when we are after december 1st and before december 25th. Noch {{remainingDays}} Tage bis Weihnachten!",
+    "contact_title": "This is the contact title",
+    "contact_description": "This is the contact description",
+    "contact_email": "santa@nordpol.com",
+    "form_success_message": "Thank you for your message. We will get back to you as soon as possible.",
+    "mail_confirmation_subject": "Thank you for your message",
+    "mail_confirmation_message": "Thank you for your message. We will get back to you as soon as possible."
+}

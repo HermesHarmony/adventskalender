@@ -1,0 +1,171 @@
+
+
+html {
+    font-size: 16px;
+    /* Hintergrundfarbe #880000 */
+    background-color: #eaeff2;
+    padding: 0px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    font-size: 16px;
+    color: #EFEFEF;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    /* TESTEN */
+    border: 0px solid #FFFFFF;
+}
+
+.titleText {
+    font-size: calc(0.8rem + 1.5vw);
+    color: #000;
+    padding: 0px;
+    margin: 25px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.contentText {
+    font-size: calc(0.5rem + 1.2vw);
+    color: #000;
+    padding: 0px;
+    margin: 35px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+
+#adventContainer0 {
+  position: relative;
+  top: 0px;
+  left: 0;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  /* TESTEN */
+  border: 0px solid #FFDF00;
+  height: auto;
+}
+
+
+#adventContainer1 {
+  z-index: 1;
+  position: relative;
+  top: 0px;
+  left: 0;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  /* max-width: kann man anpassen 60%; 800px; ... */
+  max-width: 800px;
+  height: calc(vh * 66.66);
+  border: 0px solid #FFFFFF;
+}
+
+
+#adventGrafic {
+  z-index: 2;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#adventGrafic img {
+  /* Ecken abrunden */
+  border-radius:0px;
+  border: 0px solid #FFFFFF;
+}
+
+#table1,
+#table2  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+
+#table1 {
+  z-index: 3;
+}
+
+#table2 {
+  z-index: 4;
+}
+
+#table2 table {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#table1 td,
+#table2 td {
+  width: 16.66%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* Rand 1 zum Testen */
+  border: 0px solid #000;
+}
+
+#table1 td {
+  font-size: 30px;
+}
+
+#table2 a {
+  text-decoration: none;
+}
+
+#table2 a:hover img {
+  animation: mymove 3s;
+  /* MouseOver
+  color: #FFFFFF;
+  border: 0px solid transparent;
+  background-color: rgba(27, 95, 107, 0.5);
+  transition: all 1.0s linear;
+   */
+}
+
+@keyframes mymove {
+  50% {
+    -webkit-filter: opacity(0%);
+    filter: opacity(0%);
+  }
+}
+
+
+.button {
+  background-color: #2C9CAF;
+  border: none;
+  color: #FFFFFF;
+  padding: 6px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.button {
+  transition-duration: 0.6s;
+}
+
+.button:hover {
+  background-color: #FFFFFF;
+  color: #2C9CAF;
+}

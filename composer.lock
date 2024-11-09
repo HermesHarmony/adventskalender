@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "2a36b951a3e31670d1e37c174076404a",
+    "packages": [
+        {
+            "name": "formr/formr",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/formr/formr.git",
+                "reference": "ba51f8a2ce2db80b4bfc45d80a3f153a323a75ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/formr/formr/zipball/ba51f8a2ce2db80b4bfc45d80a3f153a323a75ae",
+                "reference": "ba51f8a2ce2db80b4bfc45d80a3f153a323a75ae",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "class.formr.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Gavin",
+                    "homepage": "https://formr.github.io",
+                    "role": "Original Author"
+                }
+            ],
+            "description": "Formr is a PHP library which helps you build and validate forms quickly, painlessly, and without all the messy overhead.",
+            "support": {
+                "issues": "https://github.com/formr/formr/issues",
+                "source": "https://github.com/formr/formr/tree/1.5.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/timgavin",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-08-12T16:43:56+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}
