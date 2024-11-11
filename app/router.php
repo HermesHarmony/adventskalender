@@ -10,7 +10,6 @@ $routes = [
 function abort($code = 404) {
     http_response_code($code);
     require "views/error.php";
-    die();
 }
 
 if(array_key_exists($uri, $routes)) {

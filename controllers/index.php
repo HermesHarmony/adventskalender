@@ -4,8 +4,6 @@
 $days = range(1, 24);
 shuffle($days);
 
-
-
 $title = $data['title_'.$state];
 $message = $data['message_'.$state];
 
