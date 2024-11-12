@@ -44,5 +44,10 @@ if ($form->submitted()) {
 
         // show a success message if no errors
         $form->success_message = str_replace('{{name}}', $stuff['name'], $data['form_success_message']);
+        $form->redirect('/');
+    } else {
+        // show an error message if there are errors
+        $form->error_message = $data['form_error_message'];
+        $form->redirect('/error');
     }
 }
