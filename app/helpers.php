@@ -10,14 +10,26 @@ function siteUrl() {
 }
 
 function contact($array) {
+    global $data;
+    global $form;
+
     $title = $array['title'];
     $fields = $array['fields'];
-    global $form;
+
     ?>
     <div class="mt-16">
         <h3 class="text-2xl font-bold mb-4"><?= $title; ?></h3>
         <?php $form->messages(); ?>
-        <?php $form->create_form($fields); ?>
+
+        <form action="/" method="post" class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <?php $form->create($fields); ?>
+            <div class="field">
+                <button type="submit" class="block btn btn-primary md:col-span-2">
+                    <?= $data['form_submit_button'] ?>
+                </button>
+            </div>
+        </form>
+
     </div>
     <?php
 }
