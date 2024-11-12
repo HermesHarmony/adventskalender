@@ -21,7 +21,7 @@
 		<?php endforeach; ?>
 	</div>
 
-
+	<?php $form->messages(); ?>
 
 </div>
 

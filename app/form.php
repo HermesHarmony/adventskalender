@@ -5,8 +5,7 @@ $form = new Formr\Formr('bulma');
 
 // make form global
 
-function sendConfirmationEmail($stuff, $data) {
-    global $form;
+function sendConfirmationEmail($stuff, $data, $form) {
 
     $to = $stuff['email'];
     $subject = $data['mail_confirmation_subject'];
@@ -15,8 +14,7 @@ function sendConfirmationEmail($stuff, $data) {
     $form->send_email($to, $subject, $message);
 }
 
-function sendNotificationEmail($stuff, $data) {
-    global $form;
+function sendNotificationEmail($stuff, $data, $form) {
 
     $to = $data['contact_email'];
     $subject = 'Contact Form Submission';
@@ -39,8 +37,8 @@ if ($form->submitted()) {
 
     if($form->ok()) {
         // send emails
-        sendConfirmationEmail($stuff, $data);
-        sendNotificationEmail($stuff, $data);
+        sendConfirmationEmail($stuff, $data, $form);
+        sendNotificationEmail($stuff, $data, $form);
 
         // show a success message if no errors
         $form->success_message = str_replace('{{name}}', $stuff['name'], $data['form_success_message']);
