@@ -8,9 +8,9 @@
 
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-1 w-full">
 		<?php foreach($days as $day): ?>
-			<a href="<?= $day > $currentDay ? '#' : siteUrl().'/days/day-'. $day ?>"
+			<a href="<?= siteUrl().'/days/day-'. $day ?>"
 			 data-door="<?= $day ?>" 
-			 class="relative data-[locked=true]:cursor-not-allowed flex items-center justify-center aspect-square bg-red-500 group" aria-label="Tag <?= $day ?>" 
+			 class="relative /data-[locked=true]:cursor-not-allowed flex items-center justify-center aspect-square bg-red-500 group" aria-label="Tag <?= $day ?>" 
 			 data-locked="<?= $day > $currentDay ? 'true' : 'false' ?>">
 				<figure class="absolute inset-0 hover:opacity-0 transition-opacity duration-1000">
 					<img class="w-full h-full object-cover" src="<?= './doors/'.$day .'.png' ?>" alt="Tag <?= $day ?>">
@@ -21,7 +21,9 @@
 		<?php endforeach; ?>
 	</div>
 
-	<?php $form->messages(); ?>
+	<div id="success" class="hidden target:block bg-green-600 p-8 my-8 text-white">
+		<p><?= $data['form_success_message'] ?></p>
+	</div>
 
 </div>
 

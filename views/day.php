@@ -2,8 +2,8 @@
 
 <?php if($locked): ?>
     <main class="locked">
-        <h1>Locked</h1>
-        <p>It's not time to open this door yet.</p>
+        <h1><?= $data['title_day_locked'] ?></h1>
+        <p><?= $data['message_day_locked'] ?></p>
     </main>
 <?php else: ?>
     <main class="">

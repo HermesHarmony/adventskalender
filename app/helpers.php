@@ -12,6 +12,7 @@ function siteUrl() {
 function contact($array) {
     global $data;
     global $form;
+    global $day;
 
     $title = $array['title'];
     $fields = $array['fields'];
@@ -23,6 +24,7 @@ function contact($array) {
 
         <form action="/" method="post" class="grid grid-cols-1 gap-4 md:grid-cols-2">
             <?php $form->create($fields); ?>
+            <input type="hidden" name="day" id="day" value="<?= $day ?>">
             <div class="field">
                 <button type="submit" class="block btn btn-primary md:col-span-2">
                     <?= $data['form_submit_button'] ?>

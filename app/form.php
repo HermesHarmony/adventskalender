@@ -22,6 +22,7 @@ function sendNotificationEmail($stuff, $data, $form) {
         <p>Name: '.$stuff['name'].'</p>
         <p>Email: '.$stuff['email'].'</p>
         <p>Comments: '.$stuff['comments'].'</p>
+        <p>Day: '.$data['day'].'</p>
     ';
 
     $form->send_email($to, $subject, $message);
@@ -42,7 +43,7 @@ if ($form->submitted()) {
 
         // show a success message if no errors
         $form->success_message = str_replace('{{name}}', $stuff['name'], $data['form_success_message']);
-        $form->redirect('/');
+        $form->redirect('/#success');
     } else {
         // show an error message if there are errors
         $form->error_message = $data['form_error_message'];

@@ -690,6 +690,11 @@ input, textarea {
   margin-right: auto;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -716,6 +721,10 @@ input, textarea {
 
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .aspect-square {
@@ -812,6 +821,11 @@ input, textarea {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -882,6 +896,10 @@ input, textarea {
 
 .duration-1000 {
   transition-duration: 1000ms;
+}
+
+.target\:block:target {
+  display: block;
 }
 
 .hover\:opacity-0:hover {

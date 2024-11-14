@@ -34,12 +34,15 @@ class controller {
     }
 
     openDoor(door) {
-        if(door.dataset.locked === 'false') {
-            this.currentDoor = door;
-            this.fetchDoor(door);
-        } else {
-            console.log('Nana, Du musst dich noch ein wenig gedulden!');
-        }
+        // if(door.dataset.locked === 'false') {
+        //     this.currentDoor = door;
+        //     this.fetchDoor(door);
+        // } else {
+        //     console.log('Nana, Du musst dich noch ein wenig gedulden!');
+        // }
+
+        this.currentDoor = door;
+        this.fetchDoor(door);
     }
 
     async fetchDoor({ href }) {
