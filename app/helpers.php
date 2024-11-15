@@ -16,6 +16,7 @@ function contact($array) {
 
     $title = $array['title'];
     $fields = $array['fields'];
+    $submit = $array['submit'] ?? null;
 
     ?>
     <div class="mt-16">
@@ -27,7 +28,7 @@ function contact($array) {
             <input type="hidden" name="day" id="day" value="<?= $day ?>">
             <div class="field">
                 <button type="submit" class="block btn btn-primary md:col-span-2">
-                    <?= $data['form_submit_button'] ?>
+                    <?= $submit ? $submit : $data['form_submit_button'] ?>
                 </button>
             </div>
         </form>

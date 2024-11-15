@@ -22,4 +22,9 @@ if($currentDate->format('Y') > $year) {
     }
 }
 
+if($data['debug']) {
+    $currentDay = 24;
+    $state = "unlocked";
+}
+
 $remainingDays = 24 - $currentDay;
