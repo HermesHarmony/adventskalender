@@ -14,7 +14,7 @@ if($currentDate->format('Y') > $year) {
 } else if($currentDate->format('Y') < $year) {
     $state = "locked";
 } else {
-    if($december = $currentDate->format('m') == 11) {
+    if($december = $currentDate->format('m') == 12) {
         $currentDay = $currentDate->format('d');
         $state = "active";
     } else {
