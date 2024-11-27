@@ -7,11 +7,11 @@ $form = new Formr\Formr('bulma');
 
 function sendConfirmationEmail($stuff, $data, $form) {
 
-    $to = $stuff['email'];
+    $to = isset($stuff['email']) ? $stuff['email'] : $data['e-mail'];
     $subject = $data['mail_confirmation_subject'];
     $message = str_replace('{{name}}', $stuff['name'], $data['mail_confirmation_message']);
 
-    $form->send_email($to, $subject, $message);
+    $form->send_email($to, $subject, $message, $data['contact_email'], true);
 }
 
 function sendNotificationEmail($stuff, $data, $form) {
@@ -20,12 +20,12 @@ function sendNotificationEmail($stuff, $data, $form) {
     $subject = 'Contact Form Submission';
     $message = '
         <p>Name: '.$stuff['name'].'</p>
-        <p>Email: '.$stuff['email'].'</p>
-        <p>Comments: '.$stuff['comments'].'</p>
+        <p>Email: '.isset($stuff['email']) ? $stuff['email'] : $data['e-mail'].'</p>
+        <p>Comments: '.$stuff['nachricht'].'</p>
         <p>Day: '.$data['day'].'</p>
     ';
 
-    $form->send_email($to, $subject, $message);
+    $form->send_email($to, $subject, $message, $data['contact_email'], true);
 }
 
 // make all fields required
@@ -34,7 +34,7 @@ $form->required = '*';
 // check if the form has been submitted
 if ($form->submitted()) {
     // get our form values and assign them to a variable
-    $stuff = $form->validate('Name, Email, Comments');
+    $stuff = $form->validate('Name, E-Mail, Nachricht');
 
     if($form->ok()) {
         // send emails
